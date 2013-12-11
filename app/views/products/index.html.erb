@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id='products'>
     <% @products.each do |product| %>
       <tr id=<%= "product-#{product.id}" %>
         <td><%= product.name %></td>

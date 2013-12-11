@@ -10,7 +10,14 @@ class Product
     $("#{@id}").hide()
 
   insert: ->
-    $('#products').append("<tr id=\'product-#{Product.productCount}\'><td>#{@name}</td><td>#{@description}</td><td>#{@price}</td></tr>")
+    productHTML = """
+                  <tr id=product-#{Product.productCount}>
+                    <td>#{@name}</td>
+                    <td>#{@description}</td>
+                    <td>#{@price}</td>
+                  </tr>
+                  """
+    $('#products').append(productHTML)
 
   # class method that will store all the products created with
   # Product coffeescript class
